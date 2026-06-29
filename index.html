@@ -737,7 +737,7 @@
 </head>
 <body>
 
-<div id="progress-bar" style="width:9%"></div>
+<div id="progress-bar" style="width:7.7%"></div>
 
 <div id="stage">
 
@@ -793,9 +793,9 @@
 
       <div id="tabs-medien" style="flex:1;min-height:0;">
 
-        <!-- Tab 1: Schulcard iframe -->
+        <!-- Tab 1: Schulcard (iframe is positioned absolutely on the right) -->
         <div id="tab-sn" class="tab-panel active">
-          <div class="tab-content" style="flex:0 0 280px;">
+          <div class="tab-content" style="max-width:360px;">
             <div style="display:flex;flex-direction:column;gap:8px;">
               <div class="offer-item" style="border-top:1px solid #eaeaea;">
                 <div class="offer-check">✓</div>
@@ -814,9 +814,6 @@
                 <div class="offer-text"><strong>Prominente Platzierung der Arbeitgebermarke</strong><span>Ihr Logo und Branding sichtbar präsent</span></div>
               </div>
             </div>
-          </div>
-          <div style="flex:1;border-radius:16px;overflow:hidden;border:1px solid #e5e5e5;align-self:stretch;">
-            <iframe src="schulcard_HdP_Brandenburg.html" style="width:100%;height:100%;border:none;min-height:400px;" frameborder="0"></iframe>
           </div>
         </div>
 
@@ -863,6 +860,10 @@
         </div>
 
       </div>
+    </div>
+    <!-- Schulcard: rechts, oben bündig mit Headline -->
+    <div id="schulcard-iframe-panel" style="position:absolute;top:128px;left:400px;right:44px;bottom:172px;border-radius:16px;overflow:hidden;border:1px solid #e5e5e5;z-index:5;">
+      <iframe src="schulcard_HdP_Brandenburg.html" style="width:100%;height:100%;border:none;" frameborder="0"></iframe>
     </div>
   </div>
 
@@ -936,8 +937,9 @@
 
         <!-- Station 3: Mini-Games -->
         <div id="tab-s3" class="tab-panel">
-          <div class="tab-media" style="flex:0 0 380px;height:280px;border-radius:16px;overflow:hidden;">
-            <img src="Minigames.png" alt="Mini-Games" style="width:100%;height:100%;object-fit:contain;display:block;border-radius:16px;background:#f7f7f7;" />
+          <div class="tab-media wireframe-wrap" style="flex:0 0 380px;height:280px;">
+            <img src="Minigames.png" alt="Mini-Games" style="width:100%;height:100%;object-fit:contain;display:block;background:#f7f7f7;" />
+            <div class="wireframe-badge">Wireframe</div>
           </div>
           <div class="tab-content">
             <h3>Mini-Games</h3>
@@ -957,8 +959,9 @@
 
         <!-- Station 4: Azubi-Chat -->
         <div id="tab-s4" class="tab-panel">
-          <div class="tab-media" style="flex:0 0 380px;height:280px;border-radius:16px;overflow:hidden;">
-            <img src="Azubichat.png" alt="Azubi-Chat" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;" />
+          <div class="tab-media wireframe-wrap" style="flex:0 0 380px;height:280px;">
+            <img src="Azubichat.png" alt="Azubi-Chat" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <div class="wireframe-badge">Wireframe</div>
           </div>
           <div class="tab-content">
             <h3>Azubi-Chat</h3>
@@ -978,13 +981,14 @@
 
         <!-- Station 5: AR-Quartett -->
         <div id="tab-s5" class="tab-panel">
-          <div class="tab-media" style="flex:0 0 380px;height:280px;border-radius:16px;overflow:hidden;background:#000;">
+          <div class="tab-media wireframe-wrap" style="flex:0 0 380px;height:280px;background:#000;">
             <iframe
               src="https://www.youtube.com/embed/uXLoTjtRp1M?rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=uXLoTjtRp1M"
               style="width:100%;height:100%;border:none;"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
             </iframe>
+            <div class="wireframe-badge">Wireframe</div>
           </div>
           <div class="tab-content">
             <div class="coming-soon-badge">✦ Coming Soon</div>
@@ -1022,9 +1026,9 @@
             <img src="https://www.deinerstertag.de/wp-content/uploads/Videostunde-Titelbild-360-1-Praktisch_Technisch-modified-1536x952.jpg" alt="Videostunde" style="border-radius:16px;width:100%;height:100%;object-fit:cover;" />
           </div>
           <div style="display:flex;align-items:flex-start;gap:8px;">
-            <svg width="36" height="40" viewBox="0 0 36 40" fill="none" style="flex-shrink:0;margin-top:2px;"><path d="M6 4 C6 4, 4 22, 26 32" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M18 26 L26 32 L20 38" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <svg width="36" height="48" viewBox="0 0 36 48" fill="none" style="flex-shrink:0;margin-top:2px;"><path d="M8 4 C8 4, 4 28, 28 40" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" fill="none"/><polygon points="21,34 31,43 19,46" fill="var(--brand)"/></svg>
             <div style="background:var(--yellow);border-radius:12px;padding:12px 16px;font-size:13px;line-height:1.6;flex:1;">
-              <strong>Übrigens.</strong> Das ist Samir Salim. Bei der Zielgruppe bekannt durch seine Hauptrolle in „Softies" (RTL) und bald in einer neuen Staffel „4 Blocks".
+              <strong>Übrigens:</strong> Das ist Samir Salim. Bei der Zielgruppe bekannt durch seine Hauptrolle in „Softies" (RTL) und bald in einer neuen Staffel „4 Blocks".
             </div>
           </div>
         </div>
@@ -1106,30 +1110,10 @@
               <span style="font-size:14px;color:rgba(24,24,24,0.6);">Davon viele sicher auch in Ihrer Region.</span>
             </div>
           </div>
-          <div style="background:white;border-radius:16px;border:1px solid #e5e5e5;padding:24px 28px;">
-            <div style="font-size:16px;font-weight:600;color:var(--dark);margin-bottom:6px;">Jetzt suchen</div>
-            <div style="font-size:13px;color:rgba(24,24,24,0.55);margin-bottom:20px;">Postleitzahl eingeben und Suchradius wählen.</div>
-            <div style="display:flex;gap:12px;align-items:flex-end;">
-              <div style="flex:1;">
-                <label style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:6px;">Postleitzahl</label>
-                <input id="plz-input" type="text" placeholder="z. B. 14776" style="width:100%;padding:10px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:'Roboto',sans-serif;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='#ddd'" onkeydown="if(event.key==='Enter')searchSchulen()" />
-              </div>
-              <div style="flex:0 0 130px;">
-                <label style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:6px;">Radius</label>
-                <select id="radius-select" style="width:100%;padding:10px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:'Roboto',sans-serif;outline:none;background:white;cursor:pointer;">
-                  <option value="10">10 km</option>
-                  <option value="20">20 km</option>
-                  <option value="30" selected>30 km</option>
-                  <option value="50">50 km</option>
-                  <option value="100">100 km</option>
-                </select>
-              </div>
-              <button onclick="searchSchulen()" class="cta-btn" style="flex-shrink:0;padding:10px 22px;font-size:14px;">
-                Schulen suchen
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-          </div>
+          <a href="https://www.deinerstertag.de/schulsuche/" target="_blank" class="cta-btn">
+            Schulen in meiner Region suchen
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
         </div>
         <div style="border-radius:20px;overflow:hidden;">
           <img src="Schulkarte.png" alt="Schulen in Deutschland" style="width:100%;height:100%;object-fit:contain;" />
@@ -1209,6 +1193,10 @@
               <tr>
                 <td>360°-Rundgang</td>
                 <td style="text-align:right;">14.900 €</td>
+              </tr>
+              <tr>
+                <td>JobApp (1 Beruf)</td>
+                <td style="text-align:right;color:var(--brand);font-weight:600;">inklusive</td>
               </tr>
             </tbody>
           </table>
@@ -1309,6 +1297,75 @@
         </div>
       </div>
       <p style="font-size:11px;color:#aaa;margin-top:10px;">* Alle Preise verstehen sich netto zzgl. MwSt.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       FOLIE – JOBAPP
+  ══════════════════════════════════════════ -->
+  <div class="slide" id="slide-jobapp" data-dark="false">
+    <div class="slide-inner">
+      <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
+      <div class="eyebrow">Bonus · JobApp</div>
+      <h1 class="slide-h1">Employer Branding – <strong>von Klasse 7 bis zum Abschluss.</strong></h1>
+
+      <div style="display:flex;gap:40px;flex:1;align-items:flex-start;margin-top:8px;">
+        <div style="flex:0 0 340px;border-radius:16px;overflow:hidden;height:260px;background:#f0f0f0;">
+          <img src="jobapp.png" alt="JobApp" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="tab-content">
+          <p>Das Schulprogramm schafft <strong>nachhaltig</strong> Bekanntheit und Begeisterung. Die JobApp sorgt bei Abschlussklassen dafür, dass aus Interesse eine Bewerbung wird – nahtlos, ohne Medienbruch.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+            <div class="offer-item" style="border-top:1px solid #eaeaea;">
+              <div class="offer-check">✓</div>
+              <div class="offer-text"><strong>Durchgängige Präsenz</strong><span>Von der Berufsorientierung in Klasse 7 bis zum Schulabschluss</span></div>
+            </div>
+            <div class="offer-item">
+              <div class="offer-check">✓</div>
+              <div class="offer-text"><strong>Ein Beruf auf der JobApp – im Paket enthalten</strong><span>Kein zusätzlicher Aufwand, kein Aufpreis</span></div>
+            </div>
+            <div class="offer-item">
+              <div class="offer-check">✓</div>
+              <div class="offer-text"><strong>Kein Medienbruch für Schüler*innen</strong><span>Nahtloser Übergang vom Entdecken zum Bewerben</span></div>
+            </div>
+          </div>
+          <div style="background:var(--yellow);border-radius:14px;padding:16px 20px;margin-top:16px;font-size:14px;line-height:1.6;">
+            Wir sehen uns als nachhaltiges Employer Branding-Instrument an Schulen – nicht als weitere Jobbörse. Trotzdem ermöglichen wir Schüler*innen in Abschlussklassen eine nahtlose Customer Journey.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       FOLIE – UPGRADES
+  ══════════════════════════════════════════ -->
+  <div class="slide" id="slide-upgrades" data-dark="false">
+    <div class="slide-inner">
+      <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
+      <div class="eyebrow">Optional · Upgrades</div>
+      <h1 class="slide-h1">Noch mehr <strong>Wirkung.</strong></h1>
+      <p style="font-size:15px;color:rgba(24,24,24,0.55);margin-bottom:20px;margin-top:-10px;">Wenn Sie Ihre Präsenz an Schulen weiter ausbauen möchten – jetzt oder später.</p>
+
+      <div style="display:flex;gap:32px;flex:1;min-height:0;align-items:stretch;">
+        <div style="flex:0 0 220px;border-radius:16px;overflow:hidden;background:#000;">
+          <iframe src="https://www.youtube.com/embed/QowVfjocyUI?rel=0&modestbranding=1" style="width:100%;height:100%;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:14px;">
+          <div style="background:#f0fafd;border:1.5px solid rgba(0,175,214,0.2);border-radius:16px;padding:20px 24px;">
+            <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--brand);margin-bottom:8px;">Alle Berufe darstellen</div>
+            <p style="font-size:14px;line-height:1.6;color:rgba(24,24,24,0.75);margin:0;">Wir erstellen für jeden Ihrer Ausbildungsberufe eine eigene Schulcard – und vermarkten alle gleichzeitig in Schulen Ihrer Region.</p>
+          </div>
+          <div style="background:#f0fafd;border:1.5px solid rgba(0,175,214,0.2);border-radius:16px;padding:20px 24px;">
+            <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--brand);margin-bottom:8px;">Bewerbungen übertragen</div>
+            <p style="font-size:14px;line-height:1.6;color:rgba(24,24,24,0.75);margin:0;">Bewerbungen aus der JobApp landen direkt in Ihrem Bewerbungsmanagementsystem – ohne manuellen Aufwand.</p>
+          </div>
+          <div style="background:#f0fafd;border:1.5px solid rgba(0,175,214,0.2);border-radius:16px;padding:20px 24px;">
+            <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--brand);margin-bottom:8px;">Hardware für Messen &amp; Events</div>
+            <p style="font-size:14px;line-height:1.6;color:rgba(24,24,24,0.75);margin:0;">VR-Brillen oder Touchscreens kaufen, einrichten und mit Ihren Filmen bespielen – inklusive zweijähriger Gewährleistung.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1435,6 +1492,8 @@ function switchTab(containerId, panelId, btn) {
   document.getElementById(panelId).classList.add('active');
   btn.closest('.tab-row').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  const sc = document.getElementById('schulcard-iframe-panel');
+  if (sc) sc.style.display = panelId === 'tab-sn' ? 'block' : 'none';
 }
 
 // ── PRICING CALCULATOR ──────────────────────────
@@ -1552,6 +1611,15 @@ function renderCalc() {
       </div>`;
   });
 
+  html += `<div class="result-beruf-card">
+    <div class="result-beruf-header" style="background:#e8f7fb;">
+      <span style="color:var(--dark);">JobApp</span>
+      <span class="result-badge" style="background:var(--brand);color:white;">Im Paket enthalten</span>
+    </div>
+    <div style="padding:8px 0;">
+      <div class="result-line"><span>1 Beruf auf der JobApp</span><span class="amt" style="color:var(--brand);">inklusive</span></div>
+    </div>
+  </div>`;
   resultBerufe.innerHTML = html;
   resultEmpty.style.display = 'none';
 
