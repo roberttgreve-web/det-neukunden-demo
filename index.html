@@ -782,7 +782,8 @@
     <div class="slide-inner">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Phase 1 · Medienproduktion</div>
-      <h1 class="slide-h1">Für Ihre Berufe <strong>begeistern.</strong></h1>
+      <h1 class="slide-h1" style="margin-bottom:8px;">Für Ihre Berufe <strong>begeistern.</strong></h1>
+      <p style="font-size:15px;color:rgba(24,24,24,0.55);line-height:1.5;margin-bottom:20px;">Sie wählen das Medium, das am besten zu Ihnen passt.</p>
 
       <div class="tab-row">
         <button class="tab-btn active" onclick="switchTab('tabs-medien', 'tab-sn', this)">Sprachnachricht + Mini-Games</button>
@@ -794,10 +795,8 @@
 
         <!-- Tab 1: Schulcard iframe -->
         <div id="tab-sn" class="tab-panel active">
-          <div class="tab-content">
-            <h3>Die Schulcard</h3>
-            <p>Das digitale Herzstück – Ihr Beruf, aufbereitet für Schüler*innen auf einer interaktiven Profilseite.</p>
-            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+          <div class="tab-content" style="flex:0 0 280px;">
+            <div style="display:flex;flex-direction:column;gap:8px;">
               <div class="offer-item" style="border-top:1px solid #eaeaea;">
                 <div class="offer-check">✓</div>
                 <div class="offer-text"><strong>Sprachnachricht von echten Azubis oder mit KI-Stimme</strong><span>Authentisch und direkt erlebbar</span></div>
@@ -816,22 +815,15 @@
               </div>
             </div>
           </div>
-          <div style="flex:0 0 460px;border-radius:16px;overflow:hidden;border:1px solid #e5e5e5;align-self:stretch;">
+          <div style="flex:1;border-radius:16px;overflow:hidden;border:1px solid #e5e5e5;align-self:stretch;">
             <iframe src="schulcard_HdP_Brandenburg.html" style="width:100%;height:100%;border:none;min-height:400px;" frameborder="0"></iframe>
           </div>
         </div>
 
         <!-- Tab 2: #kurzerklärt -->
         <div id="tab-ke" class="tab-panel">
-          <div class="tab-media" style="flex:0 0 360px;">
-            <a class="yt-thumb" href="https://www.youtube.com/watch?v=uGsxUGgQpBY" target="_blank">
-              <img src="https://img.youtube.com/vi/uGsxUGgQpBY/hqdefault.jpg" alt="#kurzerklärt Beispiel" />
-              <div class="yt-play">
-                <div class="yt-play-btn">
-                  <svg width="22" height="22" fill="var(--brand)" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
-            </a>
+          <div class="tab-media" style="flex:0 0 360px;height:240px;background:#000;">
+            <iframe src="https://www.youtube.com/embed/uGsxUGgQpBY?rel=0&modestbranding=1" style="width:100%;height:100%;border:none;border-radius:16px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="tab-content">
             <h3>#kurzerklärt</h3>
@@ -851,15 +843,8 @@
 
         <!-- Tab 3: 360° -->
         <div id="tab-vr" class="tab-panel">
-          <div class="tab-media" style="flex:0 0 360px;">
-            <a class="yt-thumb" href="https://www.youtube.com/watch?v=zwiAASX8YH0" target="_blank">
-              <img src="https://img.youtube.com/vi/zwiAASX8YH0/hqdefault.jpg" alt="360°-Rundgang Beispiel" />
-              <div class="yt-play">
-                <div class="yt-play-btn">
-                  <svg width="22" height="22" fill="var(--brand)" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
-            </a>
+          <div class="tab-media" style="flex:0 0 360px;height:240px;background:#000;">
+            <iframe src="https://www.youtube.com/embed/zwiAASX8YH0?rel=0&modestbranding=1" style="width:100%;height:100%;border:none;border-radius:16px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="tab-content">
             <h3>360°-Rundgang</h3>
@@ -889,7 +874,7 @@
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Phase 2 · Schulvermarktung · Medienbox</div>
       <h1 class="slide-h1">Und so geht's an die Schule: <strong>Die Medienbox.</strong></h1>
-      <p style="font-size:15px;color:rgba(24,24,24,0.6);line-height:1.5;margin-top:-10px;margin-bottom:8px;">Schulen holen sich die spannendste Berufsmesse direkt in ihre Klassenzimmer. Kostenlos für 7 Tage.</p>
+      <p style="font-size:15px;color:rgba(24,24,24,0.6);line-height:1.5;margin-top:-10px;margin-bottom:20px;">Schulen holen sich die spannendste Berufsmesse direkt in ihre Klassenzimmer. Kostenlos für 7 Tage.</p>
 
       <div class="tab-row">
         <button class="tab-btn active" onclick="switchTab('tabs-box', 'tab-s1', this)">Station 1: 360-Grad-Rundgänge erleben</button>
@@ -1037,7 +1022,7 @@
             <img src="https://www.deinerstertag.de/wp-content/uploads/Videostunde-Titelbild-360-1-Praktisch_Technisch-modified-1536x952.jpg" alt="Videostunde" style="border-radius:16px;width:100%;height:100%;object-fit:cover;" />
           </div>
           <div style="display:flex;align-items:flex-start;gap:8px;">
-            <svg width="28" height="32" viewBox="0 0 28 32" fill="none" style="flex-shrink:0;margin-top:4px;"><path d="M24 2 C24 2, 6 4, 4 20 C3 26, 6 30, 6 30 M6 30 L2 24 M6 30 L12 27" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <svg width="36" height="40" viewBox="0 0 36 40" fill="none" style="flex-shrink:0;margin-top:2px;"><path d="M6 4 C6 4, 4 22, 26 32" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M18 26 L26 32 L20 38" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
             <div style="background:var(--yellow);border-radius:12px;padding:12px 16px;font-size:13px;line-height:1.6;flex:1;">
               <strong>Übrigens.</strong> Das ist Samir Salim. Bei der Zielgruppe bekannt durch seine Hauptrolle in „Softies" (RTL) und bald in einer neuen Staffel „4 Blocks".
             </div>
@@ -1045,7 +1030,7 @@
         </div>
         <div class="tab-content">
           <h3>Die Videostunde</h3>
-          <p>Der Lehrer startet die Unterrichtseinheit am Smartboard – <strong>für 45 Minuten übernehmen wir den Unterricht</strong>. Schüler*innen sehen regionalisierte Filme von Ausbildungsbetrieben aus ihrer Umgebung und bearbeiten passende Aufgaben.</p>
+          <p>Die Lehrkraft startet die Unterrichtseinheit am Smartboard – <strong>für 45 Minuten übernehmen wir den Unterricht</strong>. Schüler*innen sehen regionalisierte Filme von Ausbildungsbetrieben aus ihrer Umgebung und bearbeiten passende Aufgaben.</p>
           <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
             <div class="offer-item" style="border-top:1px solid #eaeaea;">
               <div class="offer-check">✓</div>
@@ -1121,8 +1106,29 @@
               <span style="font-size:14px;color:rgba(24,24,24,0.6);">Davon viele sicher auch in Ihrer Region.</span>
             </div>
           </div>
-          <div style="border-radius:16px;overflow:hidden;border:1px solid #e5e5e5;height:260px;">
-            <iframe src="https://www.deinerstertag.de/schulsuche/" style="width:100%;height:100%;border:none;" frameborder="0" scrolling="no"></iframe>
+          <div style="background:white;border-radius:16px;border:1px solid #e5e5e5;padding:24px 28px;">
+            <div style="font-size:16px;font-weight:600;color:var(--dark);margin-bottom:6px;">Jetzt suchen</div>
+            <div style="font-size:13px;color:rgba(24,24,24,0.55);margin-bottom:20px;">Postleitzahl eingeben und Suchradius wählen.</div>
+            <div style="display:flex;gap:12px;align-items:flex-end;">
+              <div style="flex:1;">
+                <label style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:6px;">Postleitzahl</label>
+                <input id="plz-input" type="text" placeholder="z. B. 14776" style="width:100%;padding:10px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:'Roboto',sans-serif;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='#ddd'" onkeydown="if(event.key==='Enter')searchSchulen()" />
+              </div>
+              <div style="flex:0 0 130px;">
+                <label style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:6px;">Radius</label>
+                <select id="radius-select" style="width:100%;padding:10px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:'Roboto',sans-serif;outline:none;background:white;cursor:pointer;">
+                  <option value="10">10 km</option>
+                  <option value="20">20 km</option>
+                  <option value="30" selected>30 km</option>
+                  <option value="50">50 km</option>
+                  <option value="100">100 km</option>
+                </select>
+              </div>
+              <button onclick="searchSchulen()" class="cta-btn" style="flex-shrink:0;padding:10px 22px;font-size:14px;">
+                Schulen suchen
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
           </div>
         </div>
         <div style="border-radius:20px;overflow:hidden;">
@@ -1142,7 +1148,7 @@
       <h1 class="slide-h1">Was kostet ein<br><strong>Schüler-Kontakt wirklich?</strong></h1>
 
       <div class="price-compare">
-        <div class="compare-card messe">
+        <div class="compare-card messe" style="align-self:start;">
           <div class="compare-label">Schülermesse</div>
           <div class="compare-price" style="font-size:clamp(28px,3.2vw,52px);">20 – 110 €</div>
           <div class="compare-desc">pro erreichtem Schüler oder erreichter Schülerin — Standgebühr, Anreise, Personal und Ausfallzeit eingerechnet.</div>
@@ -1569,6 +1575,16 @@ function renderCalc() {
         <span style="font-size:22px;font-weight:700;color:var(--dark);">${fmt(erstjahr)}</span>
       </div>` : ''}
     </div>`;
+}
+
+// ── SCHULSUCHE ───────────────────────────────────
+function searchSchulen() {
+  const plz = document.getElementById('plz-input').value.trim();
+  const radius = document.getElementById('radius-select').value;
+  const input = document.getElementById('plz-input');
+  if (!plz) { input.style.borderColor = '#e53e3e'; input.focus(); return; }
+  input.style.borderColor = '#ddd';
+  window.open(`https://www.deinerstertag.de/schulsuche/?plz=${encodeURIComponent(plz)}&radius=${radius}`, '_blank');
 }
 
 // Init
