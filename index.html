@@ -169,30 +169,9 @@
       line-height: 1.1;
       letter-spacing: -0.03em;
       color: var(--dark);
-      margin-bottom: 20px;
+      margin-bottom: 32px;
     }
     .title-h1 strong { font-weight: 700; }
-
-    /* placeholder company box */
-    .company-placeholder {
-      display: flex; align-items: center; gap: 12px;
-      padding: 10px 16px;
-      border: 1.5px dashed #c0c0c0;
-      border-radius: 10px;
-      background: #fafafa;
-      margin-bottom: 28px;
-      width: fit-content;
-    }
-    .company-placeholder-logo {
-      width: 40px; height: 40px;
-      border: 1.5px dashed #c0c0c0;
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 10px; color: #aaa; text-align: center; line-height: 1.2;
-    }
-    .company-placeholder-name {
-      font-size: 13px; color: #aaa; font-style: italic;
-    }
 
     /* ── CONTENT SLIDES ── */
     .slide-inner {
@@ -236,6 +215,7 @@
       gap: 6px;
       margin-bottom: 20px;
       flex-shrink: 0;
+      flex-wrap: wrap;
     }
     .tab-btn {
       padding: 8px 18px;
@@ -536,14 +516,13 @@
     .result-line:last-child { border-bottom: none; }
     .result-line .amt { font-weight: 600; }
     .result-total-box {
-      background: var(--dark);
+      background: var(--yellow);
       border-radius: 10px;
       padding: 18px 20px;
-      color: white;
+      color: var(--dark);
     }
-    .result-total-label { font-size: 12px; color: #aaa; margin-bottom: 2px; }
-    .result-total-amount { font-size: 22px; font-weight: 700; }
-    .result-total-amount.yellow { color: var(--yellow); }
+    .result-total-label { font-size: 12px; color: rgba(24,24,24,0.6); margin-bottom: 2px; }
+    .result-total-amount { font-size: 22px; font-weight: 700; color: var(--dark); }
 
     /* ── ANIMATION ── */
     @keyframes slideIn {
@@ -617,21 +596,6 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.25);
     }
     .yt-play-btn svg { margin-left: 4px; }
-
-    /* mini-games placeholder */
-    .minigame-placeholder {
-      background: linear-gradient(135deg, #f0fafd 0%, #e8f7fb 100%);
-      border: 2px dashed rgba(0,175,214,0.3);
-      border-radius: 14px;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 10px;
-      padding: 32px;
-      color: var(--brand);
-      font-size: 13px; font-weight: 500;
-      text-align: center;
-    }
-    .minigame-placeholder .icon { font-size: 36px; }
 
     /* schulsuche slide */
     .schulsuche-layout {
@@ -733,11 +697,47 @@
     .price-table tfoot td { padding: 11px 12px; color: white; font-weight: 700; font-size: 13px; }
     .price-table tfoot td:not(:first-child) { text-align: right; color: var(--yellow); }
     .price-note { font-size: 11px; color: #999; margin-top: 6px; }
+
+    /* wireframe badge */
+    .wireframe-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .wireframe-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      background: var(--yellow);
+      color: var(--dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    /* coming soon badge */
+    .coming-soon-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0,175,214,0.1);
+      color: var(--brand);
+      border: 1px solid rgba(0,175,214,0.3);
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
   </style>
 </head>
 <body>
 
-<div id="progress-bar" style="width:11%"></div>
+<div id="progress-bar" style="width:9%"></div>
 
 <div id="stage">
 
@@ -747,20 +747,16 @@
   <div class="slide active" id="slide-0" data-dark="false">
     <div class="title-logo-bar">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="title-logo" />
+      <span style="font-size:20px;color:#bbb;font-weight:300;line-height:1;">×</span>
+      <img src="Logo Polizei Brandenburg.png" alt="Polizei Brandenburg" class="title-logo" />
     </div>
 
     <div class="title-layout">
       <div class="title-content">
         <div class="title-accent"></div>
 
-        <!-- Company placeholder -->
-        <div class="company-placeholder">
-          <div class="company-placeholder-logo">Logo</div>
-          <div class="company-placeholder-name">[Unternehmensname]</div>
-        </div>
-
         <h1 class="title-h1">
-          Ihr nächster Azubi sitzt<br>in einer Schulklasse.<br><strong>Wir bringen Sie dahin.</strong>
+          Ihr nächster Azubi sitzt<br>in einer Schulklasse.<br><strong>Wir bringen Sie dorthin.</strong>
         </h1>
 
         <div>
@@ -784,7 +780,7 @@
     <div class="slide-inner">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Phase 1 · Medienproduktion</div>
-      <h1 class="slide-h1">Berufe <strong>attraktiv darstellen.</strong></h1>
+      <h1 class="slide-h1">Für Ihre Berufe <strong>begeistern.</strong></h1>
 
       <div class="tab-row">
         <button class="tab-btn active" onclick="switchTab('tabs-medien', 'tab-sn', this)">Sprachnachricht + Mini-Games</button>
@@ -794,44 +790,18 @@
 
       <div id="tabs-medien" style="flex:1;min-height:0;">
 
-        <!-- Tab 1: Sprachnachricht + Mini-Games -->
-        <div id="tab-sn" class="tab-panel active">
-          <div class="tab-media" style="display:flex;flex-direction:column;gap:12px;flex:0 0 360px;">
-            <div class="audio-player">
-              <div class="audio-label">🎙 Beispiel-Sprachnachricht</div>
-              <audio controls src="ElevenLabs_2026-05-28T11_11_39_Yvonne_gen_sp100_s80_sb60_v3.mp3"></audio>
-            </div>
-            <div class="minigame-placeholder" style="flex:1;min-height:160px;">
-              <div class="icon">🎮</div>
-              <div>Mini-Games</div>
-              <div style="font-size:11px;opacity:0.7;">Interaktives Beispiel folgt</div>
-            </div>
-          </div>
-          <div class="tab-content">
-            <h3>Sprachnachricht &amp; Mini-Games</h3>
-            <p>Durch eine <strong>Sprachnachricht</strong> und interaktive <strong>Mini-Games</strong> wird Ihr Beruf lebendig und authentisch dargestellt. Die Vertonung kann direkt durch eine oder einen Ihrer Auszubildenden erfolgen – oder alternativ KI-gestützt produziert werden.</p>
-            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
-              <div class="offer-item" style="border-top:1px solid #eaeaea;">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Authentische O-Töne von echten Azubis</strong><span>Direkt in der Schulcard erlebbar</span></div>
-              </div>
-              <div class="offer-item">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Hohe Verweildauer &amp; Erinnerungswert</strong><span>Spielerisch den Beruf entdecken</span></div>
-              </div>
-              <div class="offer-item">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Im Basispaket enthalten</strong><span>Keine zusätzlichen Produktionskosten</span></div>
-              </div>
-            </div>
+        <!-- Tab 1: Schulcard iframe -->
+        <div id="tab-sn" class="tab-panel active" style="display:flex;">
+          <div style="flex:1;border-radius:16px;overflow:hidden;border:1px solid #e5e5e5;">
+            <iframe src="schulcard_HdP_Brandenburg.html" style="width:100%;height:100%;border:none;min-height:420px;" frameborder="0"></iframe>
           </div>
         </div>
 
         <!-- Tab 2: #kurzerklärt -->
         <div id="tab-ke" class="tab-panel">
           <div class="tab-media" style="flex:0 0 360px;">
-            <a class="yt-thumb" href="https://www.youtube.com/watch?v=b2MmnKW3yjE" target="_blank">
-              <img src="https://img.youtube.com/vi/b2MmnKW3yjE/maxresdefault.jpg" alt="#kurzerklärt Beispiel" />
+            <a class="yt-thumb" href="https://www.youtube.com/watch?v=uGsxUGgQpBY" target="_blank">
+              <img src="https://img.youtube.com/vi/uGsxUGgQpBY/hqdefault.jpg" alt="#kurzerklärt Beispiel" />
               <div class="yt-play">
                 <div class="yt-play-btn">
                   <svg width="22" height="22" fill="var(--brand)" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -851,10 +821,6 @@
                 <div class="offer-check">✓</div>
                 <div class="offer-text"><strong>Unbegrenzte Nutzungsrechte</strong><span>Messen · Website · Social Media · Events</span></div>
               </div>
-              <div class="offer-item">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Einmalige Produktionskosten: 4.900 €</strong><span>Jährliche Schulvermarktung separat</span></div>
-              </div>
             </div>
           </div>
         </div>
@@ -862,8 +828,8 @@
         <!-- Tab 3: 360° -->
         <div id="tab-vr" class="tab-panel">
           <div class="tab-media" style="flex:0 0 360px;">
-            <a class="yt-thumb" href="https://www.youtube.com/watch?v=oiXWmMFLbs4" target="_blank">
-              <img src="https://img.youtube.com/vi/oiXWmMFLbs4/maxresdefault.jpg" alt="360°-Rundgang Beispiel" />
+            <a class="yt-thumb" href="https://www.youtube.com/watch?v=zwiAASX8YH0" target="_blank">
+              <img src="https://img.youtube.com/vi/zwiAASX8YH0/hqdefault.jpg" alt="360°-Rundgang Beispiel" />
               <div class="yt-play">
                 <div class="yt-play-btn">
                   <svg width="22" height="22" fill="var(--brand)" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -883,9 +849,144 @@
                 <div class="offer-check">✓</div>
                 <div class="offer-text"><strong>Unbegrenzte Nutzungsrechte</strong><span>Auch für VR-Brillen auf Messen nutzbar</span></div>
               </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       FOLIE 3.1 – MEDIENBOX (5 STATIONEN)
+  ══════════════════════════════════════════ -->
+  <div class="slide" id="slide-2" data-dark="false">
+    <div class="slide-inner">
+      <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
+      <div class="eyebrow">Phase 2 · Schulvermarktung · Medienbox</div>
+      <h1 class="slide-h1">Die <strong>Medienbox.</strong></h1>
+
+      <div class="tab-row">
+        <button class="tab-btn active" onclick="switchTab('tabs-box', 'tab-s1', this)">Station 1: 360° erleben</button>
+        <button class="tab-btn" onclick="switchTab('tabs-box', 'tab-s2', this)">Station 2: Kurzfilm-Kino</button>
+        <button class="tab-btn" onclick="switchTab('tabs-box', 'tab-s3', this)">Station 3: Mini-Games</button>
+        <button class="tab-btn" onclick="switchTab('tabs-box', 'tab-s4', this)">Station 4: Azubi-Chat</button>
+        <button class="tab-btn" onclick="switchTab('tabs-box', 'tab-s5', this)">Station 5: AR-Quartett</button>
+      </div>
+
+      <div id="tabs-box" style="flex:1;min-height:0;">
+
+        <!-- Station 1: 360° erleben -->
+        <div id="tab-s1" class="tab-panel active">
+          <div class="tab-media" style="flex:0 0 380px;height:280px;background:#000;border-radius:16px;overflow:hidden;">
+            <iframe
+              src="https://www.youtube.com/embed/OZZjn3BEouU?rel=0&modestbranding=1"
+              style="width:100%;height:100%;border:none;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="tab-content">
+            <h3>360° erleben</h3>
+            <p>Mit unseren mitgelieferten <strong>VR-Brillen</strong> erleben Jugendliche Ihren Beruf hautnah – direkt im Klassenzimmer, ohne Betriebsbesuch.</p>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+              <div class="offer-item" style="border-top:1px solid #eaeaea;">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>VR-Brillen inklusive</strong><span>Mitgeliefert in der Medienbox – keine Zusatzkosten</span></div>
+              </div>
               <div class="offer-item">
                 <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Einmalige Produktionskosten: 14.900 €</strong><span>Jährliche Schulvermarktung separat</span></div>
+                <div class="offer-text"><strong>Immersives Berufserlebnis</strong><span>Schüler*innen tauchen direkt in Ihren Arbeitsalltag ein</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Station 2: Kurzfilm-Kino -->
+        <div id="tab-s2" class="tab-panel">
+          <div class="tab-media wireframe-wrap" style="flex:0 0 380px;height:280px;">
+            <img src="kurzfilm-kino-feed.png" alt="Kurzfilm-Kino" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;" />
+            <div class="wireframe-badge">Wireframe</div>
+          </div>
+          <div class="tab-content">
+            <h3>Kurzfilm-Kino</h3>
+            <p><strong>#kurzerklärt</strong> im TikTok-Format. Direkt im Klassenraum – kurz, unterhaltsam, auf den Punkt.</p>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+              <div class="offer-item" style="border-top:1px solid #eaeaea;">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Modernes Videoformat</strong><span>Kurz, authentisch und auf Schüler*innen zugeschnitten</span></div>
+              </div>
+              <div class="offer-item">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Kein Internet nötig</strong><span>Inhalte laufen offline direkt aus der Box</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Station 3: Mini-Games -->
+        <div id="tab-s3" class="tab-panel">
+          <div class="tab-media" style="flex:0 0 380px;height:280px;border-radius:16px;overflow:hidden;">
+            <img src="Minigames.png" alt="Mini-Games" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;" />
+          </div>
+          <div class="tab-content">
+            <h3>Mini-Games</h3>
+            <p>Kurzweilige <strong>Klick-Games</strong> zum Entdecken von Berufen und Arbeitgebern – spielerisch, einprägsam, interaktiv.</p>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+              <div class="offer-item" style="border-top:1px solid #eaeaea;">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Hohe Verweildauer</strong><span>Spielerisch den Beruf entdecken – ohne Langeweile</span></div>
+              </div>
+              <div class="offer-item">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Starker Erinnerungswert</strong><span>Gamification verankert Ihren Beruf im Gedächtnis</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Station 4: Azubi-Chat -->
+        <div id="tab-s4" class="tab-panel">
+          <div class="tab-media" style="flex:0 0 380px;height:280px;border-radius:16px;overflow:hidden;">
+            <img src="Azubichat.png" alt="Azubi-Chat" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;" />
+          </div>
+          <div class="tab-content">
+            <h3>Azubi-Chat</h3>
+            <p>Eintauchen in einen (fiktiven) <strong>Azubi-Gruppenchat</strong> mit einem Azubi-Avatar aus Ihrem Unternehmen – nah, authentisch und direkt.</p>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+              <div class="offer-item" style="border-top:1px solid #eaeaea;">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Persönliche Perspektive</strong><span>Schüler*innen erleben den Alltag durch Azubi-Augen</span></div>
+              </div>
+              <div class="offer-item">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Ihr Azubi-Avatar</strong><span>Individuell auf Ihr Unternehmen zugeschnitten</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Station 5: AR-Quartett -->
+        <div id="tab-s5" class="tab-panel">
+          <div class="tab-media" style="flex:0 0 380px;height:280px;border-radius:16px;overflow:hidden;background:#000;">
+            <video
+              src="RecordIt-1E621E91-88CC-45C7-B7DA-A03F81A5306D.mp4"
+              autoplay loop muted playsinline
+              style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;">
+            </video>
+          </div>
+          <div class="tab-content">
+            <div class="coming-soon-badge">✦ Coming Soon</div>
+            <h3>AR-Quartett</h3>
+            <p>Gamecards scannen – und Schüler*innen können mit Ihrem <strong>3D-Avatar interagieren</strong>. Die Gamecard nehmen sie als Visitenkarte mit nach Hause.</p>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+              <div class="offer-item" style="border-top:1px solid #eaeaea;">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Augmented Reality</strong><span>Ihr 3D-Avatar erwacht direkt auf der Karte zum Leben</span></div>
+              </div>
+              <div class="offer-item">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Visitenkarte zum Mitnehmen</strong><span>Bleibendes Erinnerungsstück aus dem Unterricht</span></div>
               </div>
             </div>
           </div>
@@ -896,97 +997,71 @@
   </div>
 
   <!-- ══════════════════════════════════════════
-       FOLIE 3 – SCHULVERMARKTUNG (TABS)
+       FOLIE 3.2 – VIDEOSTUNDE
   ══════════════════════════════════════════ -->
-  <div class="slide" id="slide-2" data-dark="false">
+  <div class="slide" id="slide-3" data-dark="false">
     <div class="slide-inner">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
-      <div class="eyebrow">Phase 2 · Schulvermarktung</div>
-      <h1 class="slide-h1">So geht's <strong>an die Schule.</strong></h1>
+      <div class="eyebrow">Phase 2 · Schulvermarktung · Videostunde</div>
+      <h1 class="slide-h1">Die <strong>Videostunde.</strong></h1>
 
-      <div class="tab-row">
-        <button class="tab-btn active" onclick="switchTab('tabs-schule', 'tab-box', this)">Medienbox</button>
-        <button class="tab-btn" onclick="switchTab('tabs-schule', 'tab-vs', this)">Videostunde</button>
-        <button class="tab-btn" onclick="switchTab('tabs-schule', 'tab-ba', this)">Arbeitsagenturen</button>
+      <div style="display:flex;gap:40px;flex:1;align-items:flex-start;margin-top:8px;">
+        <div class="tab-media" style="flex:0 0 380px;height:280px;">
+          <img src="https://www.deinerstertag.de/wp-content/uploads/Videostunde-Titelbild-360-1-Praktisch_Technisch-modified-1536x952.jpg" alt="Videostunde" style="border-radius:16px;width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div class="tab-content">
+          <h3>Die Videostunde</h3>
+          <p>Der Lehrer startet die Unterrichtseinheit am Smartboard – <strong>für 45 Minuten übernehmen wir den Unterricht</strong>. Schüler*innen sehen regionalisierte Filme von Ausbildungsbetrieben aus ihrer Umgebung und bearbeiten passende Aufgaben.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+            <div class="offer-item" style="border-top:1px solid #eaeaea;">
+              <div class="offer-check">✓</div>
+              <div class="offer-text"><strong>Kein Aufwand für die Lehrkraft</strong><span>Keine Vorbereitung, keine extra Technik</span></div>
+            </div>
+            <div class="offer-item">
+              <div class="offer-check">✓</div>
+              <div class="offer-text"><strong>Regionalisierte Inhalte</strong><span>Betriebe aus der direkten Umgebung der Schüler</span></div>
+            </div>
+            <div class="offer-item">
+              <div class="offer-check">✓</div>
+              <div class="offer-text"><strong>Interaktiv</strong><span>Die Schüler*innen lösen Aufgaben und arbeiten aktiv mit</span></div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <div id="tabs-schule" style="flex:1;min-height:0;">
+  <!-- ══════════════════════════════════════════
+       FOLIE 3.3 – ARBEITSAGENTUREN
+  ══════════════════════════════════════════ -->
+  <div class="slide" id="slide-4" data-dark="false">
+    <div class="slide-inner">
+      <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
+      <div class="eyebrow">Phase 2 · Schulvermarktung · Bundesagentur für Arbeit</div>
+      <h1 class="slide-h1">Ihr Medium in der <strong>staatlichen Berufsberatung!</strong></h1>
 
-        <!-- Tab Medienbox -->
-        <div id="tab-box" class="tab-panel active">
-          <div class="tab-media" style="flex:0 0 380px;height:280px;">
-            <img src="Dein-Erster-Tag-Medienbox-1024x692.webp" alt="DET Medienbox" style="border-radius:16px;width:100%;height:100%;object-fit:cover;" />
-          </div>
-          <div class="tab-content">
-            <h3>Die Medienbox</h3>
-            <p>Schulen können die Medienbox <strong>kostenlos bestellen</strong> – direkt zugestellt, sieben Tage einsetzbar. Vier interaktive Stationen bringen Ihren Beruf ins Klassenzimmer, auf Schulmessen oder in die Schulbibliothek.</p>
-            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
-              <div class="offer-item" style="border-top:1px solid #eaeaea;">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Kein Internet, keine Technik nötig</strong><span>Sofort einsetzbar, vollständig plug &amp; play</span></div>
-              </div>
-              <div class="offer-item">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Dauerhaft im 50-km-Umkreis</strong><span>Kontinuierliche Präsenz an Schulen in Ihrer Region</span></div>
-              </div>
-              <div class="offer-item">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Alle Kosten übernehmen wir</strong><span>Logistik, Versicherung und Wartung inklusive</span></div>
-              </div>
+      <div style="display:flex;gap:40px;flex:1;align-items:flex-start;margin-top:8px;">
+        <div class="tab-media" style="flex:0 0 380px;height:280px;">
+          <img src="Berufsberatung.jpg" alt="Berufsberatung Arbeitsagentur" style="border-radius:16px;width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div class="tab-content">
+          <h3>Kooperation mit der Bundesagentur für Arbeit</h3>
+          <p>Über <strong>50 % der regionalen Agenturen für Arbeit</strong> nutzen unsere Inhalte bereits in der Berufsberatung. Ihr Ausbildungsberuf ist damit auch im offiziellen Beratungsgespräch präsent.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+            <div class="offer-item" style="border-top:1px solid #eaeaea;">
+              <div class="offer-check">✓</div>
+              <div class="offer-text"><strong>Präsenz im Beratungsgespräch</strong><span>Direkt beim entscheidenden Moment der Berufswahl</span></div>
+            </div>
+            <div class="offer-item">
+              <div class="offer-check">✓</div>
+              <div class="offer-text"><strong>Auf den Ständen der Agenturen auf Schülermessen vertreten</strong><span>Sichtbarkeit genau dort, wo Berufswahl stattfindet</span></div>
+            </div>
+            <div class="offer-item">
+              <div class="offer-check">✓</div>
+              <div class="offer-text"><strong>Automatisch inkludiert</strong><span>Kein zusätzlicher Aufwand Ihrerseits</span></div>
             </div>
           </div>
         </div>
-
-        <!-- Tab Videostunde -->
-        <div id="tab-vs" class="tab-panel">
-          <div class="tab-media" style="flex:0 0 380px;height:280px;">
-            <img src="https://www.deinerstertag.de/wp-content/uploads/Videostunde-Titelbild-360-1-Praktisch_Technisch-modified-1536x952.jpg" alt="Videostunde" style="border-radius:16px;width:100%;height:100%;object-fit:cover;" />
-          </div>
-          <div class="tab-content">
-            <h3>Die Videostunde</h3>
-            <p>Der Lehrer startet die Unterrichtseinheit am Smartboard – <strong>für 45 Minuten übernehmen wir den Unterricht</strong>. Schüler*innen sehen regionalisierte Filme von Ausbildungsbetrieben aus ihrer Umgebung und bearbeiten passende Aufgaben.</p>
-            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
-              <div class="offer-item" style="border-top:1px solid #eaeaea;">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Kein Aufwand für die Lehrkraft</strong><span>Keine Vorbereitung, keine extra Technik</span></div>
-              </div>
-              <div class="offer-item">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Regionalisierte Inhalte</strong><span>Betriebe aus der direkten Umgebung der Schüler</span></div>
-              </div>
-              <div class="offer-item">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>45 bis 90 Minuten</strong><span>Flexibel erweiterbar für Diskussionsrunden</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab Arbeitsagenturen -->
-        <div id="tab-ba" class="tab-panel">
-          <div class="tab-media" style="flex:0 0 380px;height:280px;">
-            <img src="Berufsberatung.jpg" alt="Berufsberatung Arbeitsagentur" style="border-radius:16px;width:100%;height:100%;object-fit:cover;" />
-          </div>
-          <div class="tab-content">
-            <h3>Kooperation mit der Bundesagentur für Arbeit</h3>
-            <p>Über <strong>50 % der regionalen Agenturen für Arbeit</strong> nutzen unsere Inhalte bereits in der Berufsberatung. Ihr Ausbildungsberuf ist damit auch im offiziellen Beratungsgespräch präsent.</p>
-            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
-              <div class="offer-item" style="border-top:1px solid #eaeaea;">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>8.800 von 13.000 Oberschulen</strong><span>Partnerschulen deutschlandweit</span></div>
-              </div>
-              <div class="offer-item">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Präsenz im Beratungsgespräch</strong><span>Direkt beim entscheidenden Moment der Berufswahl</span></div>
-              </div>
-              <div class="offer-item">
-                <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Automatisch inkludiert</strong><span>Kein zusätzlicher Aufwand Ihrerseits</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
@@ -994,7 +1069,7 @@
   <!-- ══════════════════════════════════════════
        FOLIE 4 – SCHULEN IN IHRER REGION
   ══════════════════════════════════════════ -->
-  <div class="slide" id="slide-3" data-dark="false">
+  <div class="slide" id="slide-5" data-dark="false">
     <div class="slide-inner">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Ihr Einzugsgebiet</div>
@@ -1030,7 +1105,7 @@
   <!-- ══════════════════════════════════════════
        FOLIE 5 – ERFOLGSMESSUNG
   ══════════════════════════════════════════ -->
-  <div class="slide" id="slide-4" data-dark="false">
+  <div class="slide" id="slide-6" data-dark="false">
     <div class="slide-inner">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Erfolgsmessung</div>
@@ -1041,26 +1116,12 @@
           <div class="compare-label">Schülermesse</div>
           <div class="compare-price">20 –<br>110 €</div>
           <div class="compare-desc">pro erreichtem Schüler oder erreichter Schülerin — Standgebühr, Anreise, Personal und Ausfallzeit eingerechnet.</div>
-          <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px;">
-            <div style="font-size:13px;color:#bbb;display:flex;align-items:center;gap:6px;">
-              <span>✗</span> Keine Reporting-Daten
-            </div>
-            <div style="font-size:13px;color:#bbb;display:flex;align-items:center;gap:6px;">
-              <span>✗</span> Nur an einem Tag
-            </div>
-            <div style="font-size:13px;color:#bbb;display:flex;align-items:center;gap:6px;">
-              <span>✗</span> Hoher Personalaufwand
-            </div>
-          </div>
         </div>
 
         <div class="compare-card det">
           <div class="compare-label">DEIN ERSTER TAG</div>
-          <div class="compare-price" style="font-size:clamp(28px,3.5vw,52px);display:flex;align-items:center;gap:12px;">
-            <span>90%</span>
-            <span style="font-size:18px;font-weight:400;color:var(--brand);opacity:0.7;">günstiger</span>
-          </div>
-          <div class="compare-desc">Ganzjährige Präsenz an Schulen in Ihrer Region – mit messbaren Ergebnissen und transparentem Reporting.</div>
+          <div class="compare-price">4 –<br>8 €</div>
+          <div class="compare-desc">pro Schüler-Kontakt — ganzjährige Präsenz an Schulen in Ihrer Region mit messbaren Ergebnissen und transparentem Reporting.</div>
           <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px;">
             <div style="font-size:13px;color:var(--brand);display:flex;align-items:center;gap:6px;">
               <span>✓</span> Quartalsweises Reporting
@@ -1073,7 +1134,7 @@
             </div>
           </div>
           <div class="compare-tag">
-            🏆 Das günstigste Reichweiten-Tool für Ausbildung
+            🏆 Das günstigste Reichweiten-Tool für Azubi-Schulmarketing
           </div>
         </div>
       </div>
@@ -1083,7 +1144,7 @@
   <!-- ══════════════════════════════════════════
        FOLIE 6 – KOSTEN ÜBERSICHT
   ══════════════════════════════════════════ -->
-  <div class="slide" id="slide-5" data-dark="false">
+  <div class="slide" id="slide-7" data-dark="false">
     <div class="slide-inner">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Kosten · Übersicht</div>
@@ -1160,7 +1221,7 @@
   <!-- ══════════════════════════════════════════
        FOLIE 7 – PREISRECHNER
   ══════════════════════════════════════════ -->
-  <div class="slide" id="slide-6" data-dark="false">
+  <div class="slide" id="slide-8" data-dark="false">
     <div class="slide-inner" style="padding-bottom:80px;">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Kosten · Ihr individuelles Angebot</div>
@@ -1169,8 +1230,20 @@
       <div class="calc-wrap">
         <!-- Form -->
         <div class="calc-form">
+
           <div class="calc-section-title">
             <span style="width:18px;height:18px;border-radius:50%;background:var(--brand);color:white;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">1</span>
+            Berufe &amp; Formate
+          </div>
+
+          <div id="berufe-list"></div>
+
+          <button class="add-beruf-btn" onclick="addBeruf()">+ Weiteren Beruf hinzufügen</button>
+
+          <div style="height:1px;background:#f0f0f0;margin:14px 0;"></div>
+
+          <div class="calc-section-title">
+            <span style="width:18px;height:18px;border-radius:50%;background:var(--brand);color:white;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">2</span>
             Vermarktungsgebiet
           </div>
           <div id="gebiet-btns">
@@ -1187,17 +1260,6 @@
               <div><div class="gebiet-label">Deutschlandweit</div><div class="gebiet-sub">Gesamtes Bundesgebiet</div></div>
             </button>
           </div>
-
-          <div style="height:1px;background:#f0f0f0;margin:14px 0;"></div>
-
-          <div class="calc-section-title">
-            <span style="width:18px;height:18px;border-radius:50%;background:var(--brand);color:white;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">2</span>
-            Berufe &amp; Formate
-          </div>
-
-          <div id="berufe-list"></div>
-
-          <button class="add-beruf-btn" onclick="addBeruf()">+ Weiteren Beruf hinzufügen</button>
         </div>
 
         <!-- Result -->
@@ -1206,7 +1268,7 @@
           <div id="result-berufe"></div>
           <div id="result-total" style="display:none;"></div>
           <div id="result-empty" style="color:#bbb;font-size:14px;text-align:center;margin-top:40px;">
-            Gebiet wählen und Berufe konfigurieren →
+            Berufe konfigurieren und Gebiet wählen →
           </div>
         </div>
       </div>
@@ -1216,7 +1278,7 @@
   <!-- ══════════════════════════════════════════
        FOLIE 8 – NÄCHSTE SCHRITTE
   ══════════════════════════════════════════ -->
-  <div class="slide" id="slide-7" data-dark="false">
+  <div class="slide" id="slide-9" data-dark="false">
     <div class="slide-inner">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Nächste Schritte</div>
@@ -1242,7 +1304,7 @@
   <!-- ══════════════════════════════════════════
        FOLIE 9 – ABSCHLUSS
   ══════════════════════════════════════════ -->
-  <div class="slide" id="slide-8" data-dark="false">
+  <div class="slide" id="slide-10" data-dark="false">
     <div class="slide-inner" style="justify-content:center;">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
 
@@ -1276,7 +1338,7 @@
   <button class="nav-btn hidden-btn" id="btn-back" aria-label="Zurück">‹</button>
   <div style="display:flex;align-items:center;gap:16px;">
     <div class="dot-row" id="dot-row"></div>
-    <div id="slide-counter">1 / 9</div>
+    <div id="slide-counter">1 / 11</div>
   </div>
   <button class="nav-btn primary" id="btn-next" aria-label="Weiter">›</button>
 </div>
@@ -1460,20 +1522,20 @@ function renderCalc() {
   resultTotal.style.display = 'block';
   resultTotal.innerHTML = `
     <div class="result-total-box">
-      <div style="font-size:12px;font-weight:700;color:var(--yellow);margin-bottom:12px;letter-spacing:0.05em;">GESAMTPREIS</div>
+      <div style="font-size:12px;font-weight:700;color:var(--dark);margin-bottom:12px;letter-spacing:0.05em;">GESAMTPREIS</div>
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-        <span style="font-size:13px;color:#aaa;">Jahrespreis p.a.</span>
-        <span style="font-size:18px;font-weight:700;">${fmt(gesamtJahr)}</span>
+        <span style="font-size:13px;color:rgba(24,24,24,0.6);">Jahrespreis p.a.</span>
+        <span style="font-size:18px;font-weight:700;color:var(--dark);">${fmt(gesamtJahr)}</span>
       </div>
       ${gesamtProd > 0 ? `
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-        <span style="font-size:13px;color:#aaa;">Produktion (einmalig)</span>
-        <span style="font-size:18px;font-weight:700;">${fmt(gesamtProd)}</span>
+        <span style="font-size:13px;color:rgba(24,24,24,0.6);">Produktion (einmalig)</span>
+        <span style="font-size:18px;font-weight:700;color:var(--dark);">${fmt(gesamtProd)}</span>
       </div>
-      <div style="height:1px;background:#333;margin:8px 0;"></div>
+      <div style="height:1px;background:rgba(24,24,24,0.15);margin:8px 0;"></div>
       <div style="display:flex;justify-content:space-between;align-items:center;">
-        <span style="font-size:13px;color:#aaa;">Gesamtkosten 1. Jahr</span>
-        <span style="font-size:22px;font-weight:700;color:var(--yellow);">${fmt(erstjahr)}</span>
+        <span style="font-size:13px;color:rgba(24,24,24,0.6);">Gesamtkosten 1. Jahr</span>
+        <span style="font-size:22px;font-weight:700;color:var(--dark);">${fmt(erstjahr)}</span>
       </div>` : ''}
     </div>`;
 }
