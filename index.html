@@ -759,6 +759,8 @@
           Ihr nächster Azubi sitzt<br>in einer Schulklasse.<br><strong>Wir bringen Sie dorthin.</strong>
         </h1>
 
+        <p style="font-size:15px;color:rgba(24,24,24,0.55);margin-bottom:28px;line-height:1.5;margin-top:-8px;">Im größten Schulprogramm für Berufsorientierung in Deutschland.</p>
+
         <div>
           <button class="cta-btn" onclick="goTo(1)">
             Los geht's
@@ -791,9 +793,31 @@
       <div id="tabs-medien" style="flex:1;min-height:0;">
 
         <!-- Tab 1: Schulcard iframe -->
-        <div id="tab-sn" class="tab-panel active" style="display:flex;">
-          <div style="flex:1;border-radius:16px;overflow:hidden;border:1px solid #e5e5e5;">
-            <iframe src="schulcard_HdP_Brandenburg.html" style="width:100%;height:100%;border:none;min-height:420px;" frameborder="0"></iframe>
+        <div id="tab-sn" class="tab-panel active">
+          <div class="tab-content">
+            <h3>Die Schulcard</h3>
+            <p>Das digitale Herzstück – Ihr Beruf, aufbereitet für Schüler*innen auf einer interaktiven Profilseite.</p>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+              <div class="offer-item" style="border-top:1px solid #eaeaea;">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Sprachnachricht von echten Azubis oder mit KI-Stimme</strong><span>Authentisch und direkt erlebbar</span></div>
+              </div>
+              <div class="offer-item">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Mini-Games zum Beruf entdecken</strong><span>Spielerisch und einprägsam</span></div>
+              </div>
+              <div class="offer-item">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Info-Kategorien, die Schüler*innen wirklich interessieren</strong><span>Gehalt, Alltag, Aufgaben – auf den Punkt</span></div>
+              </div>
+              <div class="offer-item">
+                <div class="offer-check">✓</div>
+                <div class="offer-text"><strong>Prominente Platzierung der Arbeitgebermarke</strong><span>Ihr Logo und Branding sichtbar präsent</span></div>
+              </div>
+            </div>
+          </div>
+          <div style="flex:0 0 460px;border-radius:16px;overflow:hidden;border:1px solid #e5e5e5;align-self:stretch;">
+            <iframe src="schulcard_HdP_Brandenburg.html" style="width:100%;height:100%;border:none;min-height:400px;" frameborder="0"></iframe>
           </div>
         </div>
 
@@ -864,10 +888,11 @@
     <div class="slide-inner">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Phase 2 · Schulvermarktung · Medienbox</div>
-      <h1 class="slide-h1">Die <strong>Medienbox.</strong></h1>
+      <h1 class="slide-h1">Und so geht's an die Schule: <strong>Die Medienbox.</strong></h1>
+      <p style="font-size:15px;color:rgba(24,24,24,0.6);line-height:1.5;margin-top:-10px;margin-bottom:8px;">Schulen holen sich die spannendste Berufsmesse direkt in ihre Klassenzimmer. Kostenlos für 7 Tage.</p>
 
       <div class="tab-row">
-        <button class="tab-btn active" onclick="switchTab('tabs-box', 'tab-s1', this)">Station 1: 360° erleben</button>
+        <button class="tab-btn active" onclick="switchTab('tabs-box', 'tab-s1', this)">Station 1: 360-Grad-Rundgänge erleben</button>
         <button class="tab-btn" onclick="switchTab('tabs-box', 'tab-s2', this)">Station 2: Kurzfilm-Kino</button>
         <button class="tab-btn" onclick="switchTab('tabs-box', 'tab-s3', this)">Station 3: Mini-Games</button>
         <button class="tab-btn" onclick="switchTab('tabs-box', 'tab-s4', this)">Station 4: Azubi-Chat</button>
@@ -927,7 +952,7 @@
         <!-- Station 3: Mini-Games -->
         <div id="tab-s3" class="tab-panel">
           <div class="tab-media" style="flex:0 0 380px;height:280px;border-radius:16px;overflow:hidden;">
-            <img src="Minigames.png" alt="Mini-Games" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;" />
+            <img src="Minigames.png" alt="Mini-Games" style="width:100%;height:100%;object-fit:contain;display:block;border-radius:16px;background:#f7f7f7;" />
           </div>
           <div class="tab-content">
             <h3>Mini-Games</h3>
@@ -939,7 +964,7 @@
               </div>
               <div class="offer-item">
                 <div class="offer-check">✓</div>
-                <div class="offer-text"><strong>Starker Erinnerungswert</strong><span>Gamification verankert Ihren Beruf im Gedächtnis</span></div>
+                <div class="offer-text"><strong>Starker Erinnerungswert</strong><span>Gamification verankert Ihren Beruf und Ihre Arbeitgebermarke im Gedächtnis</span></div>
               </div>
             </div>
           </div>
@@ -1007,8 +1032,16 @@
       <h1 class="slide-h1">Die <strong>Videostunde.</strong></h1>
 
       <div style="display:flex;gap:40px;flex:1;align-items:flex-start;margin-top:8px;">
-        <div class="tab-media" style="flex:0 0 380px;height:280px;">
-          <img src="https://www.deinerstertag.de/wp-content/uploads/Videostunde-Titelbild-360-1-Praktisch_Technisch-modified-1536x952.jpg" alt="Videostunde" style="border-radius:16px;width:100%;height:100%;object-fit:cover;" />
+        <div style="flex:0 0 380px;display:flex;flex-direction:column;gap:10px;">
+          <div class="tab-media" style="height:240px;">
+            <img src="https://www.deinerstertag.de/wp-content/uploads/Videostunde-Titelbild-360-1-Praktisch_Technisch-modified-1536x952.jpg" alt="Videostunde" style="border-radius:16px;width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <svg width="28" height="32" viewBox="0 0 28 32" fill="none" style="flex-shrink:0;margin-top:4px;"><path d="M24 2 C24 2, 6 4, 4 20 C3 26, 6 30, 6 30 M6 30 L2 24 M6 30 L12 27" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <div style="background:var(--yellow);border-radius:12px;padding:12px 16px;font-size:13px;line-height:1.6;flex:1;">
+              <strong>Übrigens.</strong> Das ist Samir Salim. Bei der Zielgruppe bekannt durch seine Hauptrolle in „Softies" (RTL) und bald in einer neuen Staffel „4 Blocks".
+            </div>
+          </div>
         </div>
         <div class="tab-content">
           <h3>Die Videostunde</h3>
@@ -1079,25 +1112,21 @@
         Wir suchen gemeinsam, welche Schulen in Ihrer Nähe DEIN ERSTER TAG bereits nutzen – und zeigen Ihnen Ihr Potenzial als Ausbildungsbetrieb.
       </p>
 
-      <div class="schulsuche-layout">
-        <div>
-          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;">
-            <div class="stat-block" style="padding:20px 24px;">
-              <div class="stat-number" style="font-size:clamp(28px,3.5vw,52px);min-width:100px;">8.800</div>
-              <div class="stat-label">
-                <strong style="font-weight:600;display:block;margin-bottom:3px;">Partnerschulen in Deutschland</strong>
-                <span style="font-size:14px;color:rgba(24,24,24,0.6);">Davon viele sicher auch in Ihrer Region.</span>
-              </div>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:32px;flex:1;align-items:start;">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div class="stat-block" style="padding:20px 24px;">
+            <div class="stat-number" style="font-size:clamp(28px,3.5vw,52px);min-width:100px;">8.800</div>
+            <div class="stat-label">
+              <strong style="font-weight:600;display:block;margin-bottom:3px;">Partnerschulen in Deutschland</strong>
+              <span style="font-size:14px;color:rgba(24,24,24,0.6);">Davon viele sicher auch in Ihrer Region.</span>
             </div>
           </div>
-          <a href="https://www.deinerstertag.de/schulsuche/" target="_blank" class="cta-btn">
-            Schulen in meiner Region suchen
-            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          </a>
+          <div style="border-radius:16px;overflow:hidden;border:1px solid #e5e5e5;height:260px;">
+            <iframe src="https://www.deinerstertag.de/schulsuche/" style="width:100%;height:100%;border:none;" frameborder="0" scrolling="no"></iframe>
+          </div>
         </div>
-
-        <div class="schulsuche-img">
-          <img src="https://www.deinerstertag.de/wp-content/uploads/JobApp-Titelbild-1536x864.jpg" alt="Schulsuche" />
+        <div style="border-radius:20px;overflow:hidden;">
+          <img src="Schulkarte.png" alt="Schulen in Deutschland" style="width:100%;height:100%;object-fit:contain;" />
         </div>
       </div>
     </div>
@@ -1115,13 +1144,13 @@
       <div class="price-compare">
         <div class="compare-card messe">
           <div class="compare-label">Schülermesse</div>
-          <div class="compare-price">20 –<br>110 €</div>
+          <div class="compare-price" style="font-size:clamp(28px,3.2vw,52px);">20 – 110 €</div>
           <div class="compare-desc">pro erreichtem Schüler oder erreichter Schülerin — Standgebühr, Anreise, Personal und Ausfallzeit eingerechnet.</div>
         </div>
 
         <div class="compare-card det">
           <div class="compare-label">DEIN ERSTER TAG</div>
-          <div class="compare-price">4 –<br>8 €</div>
+          <div class="compare-price" style="font-size:clamp(28px,3.2vw,52px);">4 – 8 €</div>
           <div class="compare-desc">pro Schüler-Kontakt — ganzjährige Präsenz an Schulen in Ihrer Region mit messbaren Ergebnissen und transparentem Reporting.</div>
           <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px;">
             <div style="font-size:13px;color:var(--brand);display:flex;align-items:center;gap:6px;">
@@ -1149,7 +1178,7 @@
     <div class="slide-inner">
       <img src="Large.svg" alt="DEIN ERSTER TAG" class="slide-logo-sm" />
       <div class="eyebrow">Kosten · Übersicht</div>
-      <h1 class="slide-h1">Transparent kalkuliert –<br><strong>kein verstecktes Kleingedrucktes.</strong></h1>
+      <h1 class="slide-h1">Unsere <strong>Kosten</strong></h1>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;flex:1;align-content:start;margin-top:4px;">
 
@@ -1177,11 +1206,11 @@
               </tr>
             </tbody>
           </table>
-          <p class="price-note">* Nutzungsrechte an allen produzierten Medien inklusive.</p>
+          <p class="price-note">* Nutzungsrechte an allen produzierten Medien inklusive. Alle Preise zzgl. MwSt.</p>
         </div>
 
         <div>
-          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--brand);margin-bottom:8px;">Schulvermarktung (p.a. pro Beruf)</div>
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--brand);margin-bottom:8px;">Schulvermarktung (pro Jahr / pro Beruf)</div>
           <table class="price-table">
             <thead>
               <tr>
@@ -1273,6 +1302,7 @@
           </div>
         </div>
       </div>
+      <p style="font-size:11px;color:#aaa;margin-top:10px;">* Alle Preise verstehen sich netto zzgl. MwSt.</p>
     </div>
   </div>
 
@@ -1288,7 +1318,7 @@
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px;max-width:680px;">
         <div style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--yellow);border-radius:14px;">
           <div style="width:30px;height:30px;border-radius:50%;background:var(--dark);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">1</div>
-          <div style="font-size:15px;font-weight:500;">Ich sende Ihnen alle Informationen sowie das Angebot noch einmal per E-Mail zu.</div>
+          <div style="font-size:15px;font-weight:500;">Ich sende Ihnen alle Informationen noch einmal per E-Mail zu.</div>
         </div>
         <div style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--yellow);border-radius:14px;">
           <div style="width:30px;height:30px;border-radius:50%;background:var(--dark);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">2</div>
